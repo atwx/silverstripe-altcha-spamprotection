@@ -1,0 +1,17 @@
+{
+  "name": "silverstripe-altcha-spamprotection",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "preview": "vite preview"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+    "altcha": "^2.2.3"
+  },
+  "devDependencies": {
+    "sass": "^1.81.0",
+    "vite": "5.2.0"
+  }
+}

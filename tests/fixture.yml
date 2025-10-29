@@ -1,0 +1,28 @@
+SilverStripe\UserForms\Model\EditableFormField\EditableFormStep:
+  step1:
+    Title: 'Step 1'
+
+SilverStripe\UserForms\Model\EditableFormField\EditableTextField:
+  basic-text:
+    Name: basic_text_name
+    Title: Basic Text Field
+
+SilverStripe\SpamProtection\EditableSpamProtectionField:
+  altcha-field:
+    Name: altcha_field_name
+    Title: Altcha Spam Protection Field
+    FieldClass: Atwx\SilverstripeAltchaSpamprotection\Forms\AltchaField
+
+#Atwx\SilverstripeAltchaSpamprotection\Forms\AltchaField:
+#  altcha-field:
+#    Name: altcha_field_name
+#    Title: Altcha Spam Protection Field
+
+SilverStripe\UserForms\Model\UserDefinedForm:
+  basic-form-page:
+    Content: '<p>Here is my form</p><p>$UserDefinedForm</p><p>Thank you for filling it out</p>'
+    Title: User Defined Form
+    Fields:
+      - =>SilverStripe\UserForms\Model\EditableFormField\EditableFormStep.step1
+      - =>SilverStripe\UserForms\Model\EditableFormField\EditableTextField.basic-text
+      - =>SilverStripe\SpamProtection\EditableSpamProtectionField.altcha-field

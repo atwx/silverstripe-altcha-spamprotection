@@ -1,0 +1,6 @@
+---
+Name: altchaspamprotection
+---
+SilverStripe\UserForms\Control\UserDefinedFormController:
+  extensions:
+    - Atwx\SilverstripeAltchaSpamprotection\Extensions\UserDefinedFormControllerExtension

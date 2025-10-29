@@ -1,0 +1,9 @@
+---
+Name: altchaspamprotectionroutes
+After:
+  - '#rootroutes'
+  - '#coreroutes'
+---
+SilverStripe\Control\Director:
+  rules:
+    '_altchaspamprotection': '%$Atwx\SilverstripeAltchaSpamprotection\Controllers\AltchaController'
