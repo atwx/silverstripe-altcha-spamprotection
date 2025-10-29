@@ -28,8 +28,10 @@ If necessary, run your project's dev/build step (for example `vendor/bin/sake de
 Minimal `altcha.yml`:
 
 ```yaml
+SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
+  default_spam_protector: Atwx\SilverstripeAltchaSpamprotection\Protectors\AltchaSpamProtector
 Atwx\SilverstripeAltchaSpamprotection\Forms\AltchaField:
-	hmac_key: 'your-very-secret-hmac-key'
+  hmac_key: 'your-very-secret-hmac-key'
 ```
 
 `AltchaField` exposes the following configuration options via SilverStripe Config (`_config/*.yml` or programmatically):
