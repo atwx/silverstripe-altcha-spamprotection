@@ -6,18 +6,11 @@ use Atwx\SilverstripeAltchaSpamprotection\Forms\AltchaField;
 use SilverStripe\Dev\FunctionalTest;
 use SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension;
 use SilverStripe\UserForms\Model\UserDefinedForm;
-use SilverStripe\Versioned\Versioned;
 
 class AltchaUserformsTest extends FunctionalTest
 {
     protected $usesDatabase = true;
     protected static $fixture_file = '../fixture.yml';
-
-    protected static $required_extensions = [
-        UserDefinedForm::class => [
-            'Atwx\SilverstripeAltchaSpamprotection\Extensions\UserDefinedFormControllerExtension',
-        ]
-    ];
 
     protected function setUp(): void
     {
