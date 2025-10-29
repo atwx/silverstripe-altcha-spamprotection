@@ -9,6 +9,7 @@ use AltchaOrg\Altcha\Hasher\Algorithm;
 use SilverStripe\Control\Director;
 use SilverStripe\Core\Validation\ValidationResult;
 use SilverStripe\Forms\FormField;
+use SilverStripe\View\Requirements;
 
 class AltchaField extends FormField
 {
@@ -80,6 +81,8 @@ class AltchaField extends FormField
 
     public function Field($properties = []): string
     {
+        Requirements::javascript('atwx/silverstripe-altcha-spamprotection:client/dist/main.js');
+
         $challengeUrl = $this->config()->get('challenge_endpoint');
         $fieldName = $this->getName();
         $defaults = [
