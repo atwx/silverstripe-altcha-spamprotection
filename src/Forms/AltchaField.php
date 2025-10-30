@@ -105,12 +105,11 @@ class AltchaField extends FormField
         return (bool) $this->config()->get('debug');
     }
 
-    public function validate(): ValidationResult
+    public function validate($result)
     {
-        $result = ValidationResult::create();
         $value = $this->value;
         if(!$value || $this->altcha->verifySolution($value, true) === false) {
-            $result->addError('Altcha Captcha validation failed');
+            $result->validationError($this->getName(), 'Altcha Captcha validation failed', 'error');
         }
         return $result;
     }
