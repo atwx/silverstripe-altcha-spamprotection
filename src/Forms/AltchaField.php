@@ -55,6 +55,13 @@ class AltchaField extends FormField
      */
     private static ?bool $debug = null;
 
+    /**
+     * Validation extension, trick to make it SS5 and SS6 compatible
+     */
+    private static $extensions = [
+        AltchaFieldValidationExtension::class,
+    ];
+
     public function __construct($name, $title = null, $value = '')
     {
         parent::__construct($name, $title, $value);
@@ -103,14 +110,5 @@ class AltchaField extends FormField
             return Director::isDev();
         }
         return (bool) $this->config()->get('debug');
-    }
-
-    public function validate($result)
-    {
-        $value = $this->value;
-        if(!$value || $this->altcha->verifySolution($value, true) === false) {
-            $result->validationError($this->getName(), 'Altcha Captcha validation failed', 'error');
-        }
-        return $result;
     }
 }
