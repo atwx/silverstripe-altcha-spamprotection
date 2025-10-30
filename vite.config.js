@@ -17,10 +17,13 @@ export default defineConfig(({command}) => {
             sourcemap: true,
             rollupOptions: {
                 input: {
-                    'main.js': './client/src/js/main.js'
+                    'main.js': './client/src/js/main.js',
+                    'main.css': './client/src/scss/main.scss'
                 },
                 output: {
-                    entryFileNames: '[name]'
+                    entryFileNames: '[name]',
+                    chunkFileNames: '[name]',
+                    assetFileNames: '[name].[ext]',
                 }
             },
         },

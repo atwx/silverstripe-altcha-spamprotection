@@ -82,6 +82,7 @@ class AltchaField extends FormField
     public function Field($properties = []): string
     {
         Requirements::javascript('atwx/silverstripe-altcha-spamprotection:client/dist/main.js');
+        Requirements::css('atwx/silverstripe-altcha-spamprotection:client/dist/main2.css');
 
         $challengeUrl = $this->config()->get('challenge_endpoint');
         $fieldName = $this->getName();

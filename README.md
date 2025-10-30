@@ -45,3 +45,7 @@ Atwx\SilverstripeAltchaSpamprotection\Forms\AltchaField:
 - `AltchaField.debug` (bool|null) — Debug flag; if `null` the field uses `Director::isDev()`.
 
 Note: Set `hmac_key` to a secure secret. This key is necessary for Altcha to generate and verify server signatures.
+
+You can generate a new key with:
+
+`php -r "echo bin2hex(random_bytes(64));"`
