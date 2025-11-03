@@ -8,7 +8,7 @@ The package provides an `AltchaField` that can be added to SilverStripe forms. I
 
 ## Requirements
 
-- PHP 8.1+
+- PHP 8.2+
 - SilverStripe 6
 
 The package depends on `altcha-org/altcha` (see `composer.json`).
