@@ -13,6 +13,7 @@
     ],
     "license": "BSD-3-Clause",
     "require": {
+        "php": "^8.2",
         "silverstripe/framework": "^5.0|^6.0",
         "silverstripe/userforms": "^6.0|^7.0",
         "silverstripe/spamprotection": "^4.0|^5.0",
