@@ -4,6 +4,7 @@ namespace Atwx\SilverstripeAltchaSpamprotection\Controllers;
 
 use Atwx\SilverstripeAltchaSpamprotection\Forms\AltchaField;
 use SilverStripe\Control\Controller;
+use SilverStripe\Control\Middleware\HTTPCacheControlMiddleware;
 
 class AltchaController extends Controller {
 
@@ -21,6 +22,7 @@ class AltchaController extends Controller {
     }
 
     public function challengeoptions() {
+        HTTPCacheControlMiddleware::singleton()->disableCache();
         $field = AltchaField::create('AltchaField');
         $challenge = $field->generateChallenge();
         return $this
